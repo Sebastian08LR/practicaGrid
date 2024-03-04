@@ -1,4 +1,116 @@
+@import url(variables.css);
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: var(--primary-color);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-rows: repeat(4, minmax(100px,1fr));
+    grid-template-areas: "MacBookAir MacBookProSpecifics MacBookProSpecifics"
+                         "MacBookAir MacBookProSpecifics MacBookProSpecifics"
+                         "MacBookAirSpecifics MacBookAirSpecifics MacBookPro"
+                         "MacBookAirSpecifics MacBookAirSpecifics MacBookPro";                                          ;
+    gap: 10px;
+    width: 800px;
+    height: 900px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+.container div{
+    background-color: var(--secondary-color);
+}
+.item1{
+    display: flex;
+    flex-direction: column;
+    grid-area: MacBookAir;
+    border-radius: 10px;
+    text-align: center;
+}
+.item1 img{
+    width: 100%;
+    height: 25vh;
+    object-fit: contain;
+}
+.giftCard{
+    color: var(--accent-color);
+    margin-bottom: 0.8em;
+}
+.item1 h3{
+    font-size: 19px;
+    margin-bottom: 1.5em;
+}
+.price{
+    font-size: 17px;
+    align-self: center;
+    width: 80%;
+    margin-bottom: 1em;
+}
+.item1 h2{
+    font-size: 12px;
+    font-weight: 300;
+}
+.item2{
+        grid-area: MacBookProSpecifics;
+        border-radius: 10px;
+ 
+}
+.item4{
+    display: flex;
+    flex-direction: column;
+    grid-area: MacBookProSpecifics;
+    border-radius: 10px;
+    text-align: center;   
+}
+.item4 img{
+    width: 100%;
+    height: 25vh;
+    object-fit: contain;
+}
+.giftCard{
+    color: var(--accent-color);
+    margin-bottom: 0.8em;
+}
+.item4 h3{
+    font-size: 19px;
+    margin-bottom: 1.5em;
+}
+.price{
+    font-size: 17px;
+    align-self: center;
+    width: 80%;
+    margin-bottom: 1em;
+}
+.item4 h2{
+    font-size: 12px;
+    font-weight: 300;
+}
+.item3{
+    grid-area: MacBookAirSpecifics;
+    border-radius: 10px;
+}
+.item4{
+    grid-area: MacBookPro;
+    border-radius: 10px;
+}
+@media (width < 800px){
+    .container{
+        grid-template-areas: 
+        "MacBookAir MacBookAir MacBookAir"
+        "MacBookProSpecifics MacBookProSpecifics MacBookProSpecifics"
+        "MacBookAirSpecifics MacBookAirSpecifics MacBookAirSpecifics"
+        "MacBookPro MacBookPro MacBookPro";
+        width: 80%;
+        height: 1300px;
+        margin-top: 50px ;
+    }
+    .container div{
+        margin-top: 15px;
+    }
 }
