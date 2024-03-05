@@ -4,17 +4,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    display: flex;
-    justify-content: center;
-}
-.appleWatchPage{
-    display: flex;
-    position: absolute;
-    margin: 15px 15px 0 15px; 
-    width: 1600px;
-    height: 930px;
-    border-radius: 20px;
-    padding: 5px;
-    border: 1px solid black;
-}
